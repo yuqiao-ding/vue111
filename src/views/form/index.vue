@@ -40,6 +40,9 @@
         <el-input v-model="form.desc" type="textarea" />
       </el-form-item>
       <el-form-item>
+        <el-button type="primary" @click="kk" icon="el-icon-search">
+        <el-link href="http://localhost:9528/#/example/table" target="_blank">搜索</el-link>
+        </el-button>
         <el-button type="primary" @click="onSubmit">Create</el-button>
         <el-button @click="onCancel">Cancel</el-button>
       </el-form-item>
@@ -58,6 +61,7 @@ export default {
         date2: '',
         delivery: false,
         type: [],
+
         resource: '',
         desc: ''
       }
@@ -67,6 +71,9 @@ export default {
     onSubmit() {
       this.$message('submit!')
     },
+    kk() {
+         console.log("你点击了新增按钮！")
+     },
     onCancel() {
       this.$message({
         message: 'cancel!',
@@ -82,4 +89,3 @@ export default {
   text-align: center;
 }
 </style>
-
